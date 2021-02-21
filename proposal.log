@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  \\Client\H$\Desktop\statelevelcensus\empiricalproject.log
+  log type:  text
+ opened on:  11 Apr 2019, 16:04:51
+
+. gen female_above25 = female_educ1 + female_educ2+female_educ3+female_educ4+fe
+> male_educ5+female_educ6
+
+. reg income_percap female_above25
+
+      Source |       SS           df       MS      Number of obs   =       153
+-------------+----------------------------------   F(1, 151)       =      5.38
+       Model |   195340663         1   195340663   Prob > F        =    0.0218
+    Residual |  5.4866e+09       151  36334855.9   R-squared       =    0.0344
+-------------+----------------------------------   Adj R-squared   =    0.0280
+       Total |  5.6819e+09       152  37380946.7   Root MSE        =    6027.8
+
+------------------------------------------------------------------------------
+income_per~p |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+female_ab~25 |   .0006302   .0002718     2.32   0.022     .0000932    .0011672
+       _cons |   12898.82   658.3846    19.59   0.000     11597.99    14199.66
+------------------------------------------------------------------------------
+
+. gen female_percentage_employed=female_employed/(female_employed+female_unemployed)
+
+. reg income_percap female_percentage_employed
+
+      Source |       SS           df       MS      Number of obs   =       153
+-------------+----------------------------------   F(1, 151)       =      9.63
+       Model |   340620755         1   340620755   Prob > F        =    0.0023
+    Residual |  5.3413e+09       151  35372736.1   R-squared       =    0.0599
+-------------+----------------------------------   Adj R-squared   =    0.0537
+       Total |  5.6819e+09       152  37380946.7   Root MSE        =    5947.5
+
+--------------------------------------------------------------------------------------------
+             income_percap |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+---------------------------+----------------------------------------------------------------
+female_percentage_employed |   105797.4   34093.67     3.10   0.002     38435.16    173159.7
+                     _cons |  -85561.02   32063.51    -2.67   0.008    -148912.1   -22209.99
+--------------------------------------------------------------------------------------------
+
+.  gen female_percentage_employed=female_employed/(female_employed+female_unemployed) * 100
+variable female_percentage_employed already defined
+r(110);
+
+. 
+. 
+. delete female_percentage_employed
+command delete is unrecognized
+r(199);
+
+. gen female_%_workforce=female_employed/(female_employed+female_unemployed)*100
+=exp required
+r(100);
+
+.  gen female_percentage_workforce=female_employed/(female_employed+male_employed)*100
+
+. reg income percap female_percentage_workforce
+income ambiguous abbreviation
+r(111);
+
+.  reg income_percap female_percentage_workforce
+
+      Source |       SS           df       MS      Number of obs   =       153
+-------------+----------------------------------   F(1, 151)       =    207.37
+       Model |  3.2878e+09         1  3.2878e+09   Prob > F        =    0.0000
+    Residual |  2.3941e+09       151  15855030.7   R-squared       =    0.5786
+-------------+----------------------------------   Adj R-squared   =    0.5759
+       Total |  5.6819e+09       152  37380946.7   Root MSE        =    3981.8
+
+---------------------------------------------------------------------------------------------
+              income_percap |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+----------------------------+----------------------------------------------------------------
+female_percentage_workforce |   1861.259   129.2522    14.40   0.000     1605.882    2116.635
+                      _cons |  -70196.23   5850.551   -12.00   0.000    -81755.74   -58636.72
+---------------------------------------------------------------------------------------------
+
+. log close
+      name:  <unnamed>
+       log:  \\Client\H$\Desktop\statelevelcensus\empiricalproject.log
+  log type:  text
+ closed on:  11 Apr 2019, 16:52:23
+--------------------------------------------------------------------------------------------------------------------
