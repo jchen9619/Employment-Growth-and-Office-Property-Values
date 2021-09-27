@@ -57,7 +57,7 @@ I fitted linear regression, Decision Tree and Random Forest on both the original
 
 **The overall best model is Random Forest with untuned hyperparameters**, as it produced one of the lowest set of RMSEs and highest R2 scores (60-70%): 
 
-  <img src="https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/master/Agg_all_models.png" />
+  <img src="https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/main/Agg_all_models.png" />
 </p>
 
 **Conclusion** <br>  
