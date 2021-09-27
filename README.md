@@ -19,11 +19,11 @@ E.g. do occupations that rise faster in number of employment have a more substan
 The feature variables are the ten-year annualized growth of five employment metrics from May 2010 to May 2020 in 11 Metropolitan Statistical Areas (MSA) of 23 occupations provided by Bureau of Labor and Statistics (BLS). The output variables, provided by the National Council of Real Estate Investment Fiduciaries (NCREIF) Property Index, are 10-year annualized total return, income return, and appreciation return of three categories of office properties: total office, CBD office and suburban office, in the same 11 MSAs as of 3/31/2021. The 10-month lag from the feature variables is employed intentionally to account for real estate values changing after economic indicators. <br>
 
 Data Dictionary: <br>
-https://git.generalassemb.ly/judycga2021/Employment-Growth-and-Office-Property-Values/blob/master/Data%20Dictionary%20-%20Preprocessed%20Dataset.ipynb <br>
+https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/main/Data%20Dictionary%20-%20Preprocessed%20Dataset.ipynb <br>
 
 **Exploratory Data Analysis (EDA)** <br>
 EDA Notebook: <br> 
-https://git.generalassemb.ly/judycga2021/Employment-Growth-and-Office-Property-Values/blob/master/EDA%20-%20Employment%20Growth%20and%20Office%20Property%20Values.ipynb
+https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/master/EDA%20-%20Employment%20Growth%20and%20Office%20Property%20Values.ipynb
 
 The following initial steps were performed to cleanse and aggregate the original datasets: <br>
 
@@ -36,7 +36,7 @@ The major challenge in the EDA process is linking the BLS and NCREIF data at the
 
 **Feature Engineering** <br>
 Feature Engineering Notebook: <br>
-https://git.generalassemb.ly/judycga2021/Employment-Growth-and-Office-Property-Values/blob/master/Feature%20Engineering%20-%20Employment%20Growth%20and%20Office%20Property%20Values.ipynb
+https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/master/Feature%20Engineering%20-%20Employment%20Growth%20and%20Office%20Property%20Values.ipynb
 
 Since all five feature variables are either skewed to the left or right, and all Office returns are significantly left-skewed, I explored the following combinations of transformation on the underlying data: <br>
 insert
@@ -51,7 +51,7 @@ The best model is produced when **both features and output variables are log-tra
 
 **Modeling** <br>
 Modeling Notebook: <br>
-https://git.generalassemb.ly/judycga2021/Employment-Growth-and-Office-Property-Values/blob/master/Modeling%20-%20Employment%20Growth%20and%20Office%20Real%20Estate%20Values.ipynb
+https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/master/Modeling%20-%20Employment%20Growth%20and%20Office%20Real%20Estate%20Values.ipynb
 
 I fitted linear regression, Decision Tree and Random Forest on both the original and log-transformed dataset. For the latter two models, I also attempted hypermeter tuning and gradient-boosting (XGBoost and AdaBoost) to improve the output. In Linear Regression, R2 improved dramatically after applying log transformation to features and outpu variables, although at the expense of root-mean-squared-errors (RMSE) being significantly higher as well. However, with the other models, the log-transformation was not additive to lowering the errors. 
 
