@@ -71,4 +71,4 @@ Occupations that have seen the fastest growth in **JOBS_1000** and **TOT_EMP** h
 
 **Assumptions and Limitations** <br>
 - The adjustment factor that segmented original real estate returns from MSA level to MSA-occupation level assumes real estate returns are only driven by the break down of job types in an MSA, in reality, supply factors affect values significantly as well.
-- If I had more time, I would add an additonal column stating whether the occupation if "H1B visa" dominant, meaning ranking in the top jobs nation wide that require the most H1B visas. I would be interested to see if jobs that have seen high growth in H1B sponsorship drove up office real estate value in those MSAs.
+- If I had more time, I would include an additonal column in the features dataset stating whether the occupation is "H1B visa" dominant, meaning ranking in the top 10 jobs nationwide that require the most H1B visas. I would be interested to see if the occupations that have seen high growth in H1B sponsorship had a significant, positive impact on office real estate value in those MSAs.
