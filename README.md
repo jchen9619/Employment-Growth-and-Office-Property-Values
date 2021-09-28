@@ -61,7 +61,7 @@ I fitted linear regression, Decision Tree and Random Forest on both the original
 </p>
 
 **Conclusion** <br>  
-Occupations that have seen the fastest growth in Number of jobs for an occupation per 1,000 jobs in a given area (**JOBS_1000**)and Total employment (**TOT_EMP**) have the largest impact on accelerating the growth of office property values. The following occupations have experienced the highest 10-year annualized growth in these two metrics nationally. Corporate migrations in these industries have likely had the most impact on a MSA's office real estate value:
+Occupations that have seen the fastest growth in number of jobs for an occupation per 1,000 jobs in a given area (**JOBS_1000**)and total employment (**TOT_EMP**) have the largest impact on accelerating the growth of office property values. The following occupations have experienced the highest 10-year annualized growth in these two metrics nationally. Corporate migrations in these industries have likely had the most impact on a MSA's office real estate value:
 
 - Healthcare Support
 - Transportation and Material Moving
