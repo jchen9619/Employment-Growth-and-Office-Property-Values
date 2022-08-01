@@ -21,11 +21,10 @@ The feature variables are the ten-year annualized growth of five employment metr
 [**EDA Notebook**](https://github.com/jchen9619/Employment-Growth-and-Office-Property-Values/blob/master/files/EDA%20-%20Employment%20Growth%20and%20Office%20Property%20Values.ipynb)
 
 The following initial steps were performed to cleanse and aggregate the original datasets: <br>
-
-Combine datasets and subset to only rows that contain data from both 2020 and 2010 <br>
-Calculate annualized growth rate <br>
-Filter data to appropriate granularity (e.g. Industry at the broadest level) <br>
-Investigate and exclude missing and non-applicable values <br>
+- Combine datasets and subset to only rows that contain data from both 2020 and 2010 <br>
+- Calculate annualized growth rate <br>
+- Filter data to appropriate granularity (e.g. Industry at the broadest level) <br>
+- Investigate and exclude missing and non-applicable values <br>
 
 The major challenge in the EDA process is linking the BLS and NCREIF data at the same level of granularity. NCREIF data is provided at the MSA level and BLS is at MSA–occupation level. An adjustment factor is added to the NCREIF dataset to calculate the proportion of a specific occupation's average total employment between 2010 and 2020 in a given MSA. This assumes each occupation's contribution to the 10-year office real estate return is proportionate to the number of jobs for that occupation in the MSA. 
 
