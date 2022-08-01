@@ -1,8 +1,6 @@
 # Employment Growth and Office Property Values
 <a id="data-source"></a>
 
-Chen Chen
-
 **Introduction** <br>
 The COVID crisis and the large-scale Work-From-Home trend has introduced unprecedented uncertainty to the demand for office space. To provide some insight against it, this project aims to assess factors that have long-term impact on office real estate values beyond near-term economic crisis, one of which is the migration of major headquarters, which is generally believed to have a positive effect. The objective is to examine the job growth metrics, out of the following five, that have the most significant relationships with office property values: <br>
 
